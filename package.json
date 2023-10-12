@@ -8,6 +8,10 @@
     "test": "jest",
     "build": "rm -rf ./whenjs.js && rollup -c"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanBurbidge/whenjs.git"
+  },
   "files": [
     "README.md",
     "package.json",

@@ -1,7 +1,7 @@
 {
   "name": "whenjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "When js is a javascript wrapper that tries to emulate the kotlin when functionality",
   "main": "whenjs.js",
   "module": "whenjs.js",
   "scripts": {
@@ -10,8 +10,8 @@
   },
   "files": [
     "README.md",
-    "index.js",
-    "package.json"
+    "package.json",
+    "whenjs.js"
   ],
   "keywords": [
     "Kotlin when",

@@ -10,7 +10,7 @@ export default {
   input: 'index.js',
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: "umd" },
-    // { file: pkg.module, format: "es" },
+    { file: pkg.module, format: "es" },
   ],
   sourcemap: true,
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')

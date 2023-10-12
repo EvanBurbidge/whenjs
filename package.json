@@ -1,0 +1,32 @@
+{
+  "name": "whenjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "whenjs.js",
+  "module": "whenjs.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c"
+  },
+  "files": [
+    "README.md",
+    "index.js",
+    "package.json"
+  ],
+  "keywords": [
+    "Kotlin when",
+    "when",
+    "conditional wrapper",
+    "whenjs",
+    "thewebuiguy"
+  ],
+  "author": "thewebuiguy",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "lodash.camelcase": "^4.3.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "whenjs",
+  "name": "kotlin-when",
   "version": "1.0.0",
   "description": "When js is a javascript wrapper that tries to emulate the kotlin when functionality",
   "main": "whenjs.js",

@@ -6,7 +6,7 @@ This essentially means that we don’t need break statements at the end of each 
 
 ## Installation
 
-`npm install whenjs`
+`npm install kotlin-when`
 
 ## Usage
 

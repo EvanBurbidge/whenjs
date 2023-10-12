@@ -1,4 +1,4 @@
-# When.js
+# kotlin-when
 
 This is a small implementation to mock the `when` functionality that is provided by kotlin. In this library, if a matching case is found, only the code in the respective case block is executed, and execution continues with the next statement after the when block.
 

@@ -12,9 +12,9 @@ This essentially means that we don’t need break statements at the end of each 
 
 ### String matching
 ```javascript
-when('11', {
-  "12": () => "not eleven?",
-  '11': () => "Bingo! It's eleven."
+when(dayOfTheWeek, {
+  "Monday": () => console.log("It's a Monday",)
+  'Tuesday': () => console.log( "It's a Tuesday")
 }); // outputs "Bingo! It's eleven."
 ```
 

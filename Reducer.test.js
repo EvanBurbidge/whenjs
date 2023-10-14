@@ -1,4 +1,4 @@
-import { when } from './dist';
+import { when } from './index';
 
 const initialState = { data: null, loading: false }
 const reducer = (state = initialState, action) => when(action.type, {

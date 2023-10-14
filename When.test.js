@@ -1,4 +1,4 @@
-import { when } from './dist';
+import { when } from './index';
 
 describe("When.js", () => {
   it("should get 'bingo its 11'", () => {

@@ -1,4 +1,4 @@
-export function when(...args) {
+function when(...args) {
   let condition;
   let conditions;
   let useConditional;

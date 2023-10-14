@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // Target ES2015
+    "module": "CommonJS",
+    // "outFile": "./when.js", // Output directory for compiled files
+    "rootDir": "./", // Source code directory
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Enable interoperability with CommonJS
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true
+  },
+  "include": [
+    "./index.ts" // Specify the source files to be compiled
+  ],
+  "exclude": []
+}

@@ -6,7 +6,8 @@
   "module": "whenjs.js",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./whenjs.js && rollup -c"
+    "build": "rm -rf ./whenjs.js && tsc",
+    "dev": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0",
-    "lodash.camelcase": "^4.3.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-sourcemaps": "^0.6.3"
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   }
 }

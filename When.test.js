@@ -1,4 +1,4 @@
-const when = require("./whenjs");
+import { when } from './dist';
 
 describe("When.js", () => {
   it("should get 'bingo its 11'", () => {

@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsup index.ts --format cjs,esm --dts",
+    "build": "tsup index.ts --format cjs,esm --dts --minify",
     "dev": "tsc -w"
   },
   "repository": {

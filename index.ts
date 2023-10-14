@@ -36,10 +36,11 @@ export function when<T>(...args: any): T | string {
 
   const operator = conditions[keyToUse];
   if (!operator && Object.prototype.hasOwnProperty.call(conditions, 'else')) {
-    return conditions.else(condition);
+    if (conditions.hasOwnProperty('else')) {
+      return conditions.else(condition);
+    }
   } else if (operator) {
     return operator(condition);
-  } else {
-    return "No matches"
   }
+  return "No matches"
 }

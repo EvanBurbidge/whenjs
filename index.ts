@@ -15,26 +15,28 @@ export function when<T>(...args: any): T | string {
       throw Error("You must supply a condition value if not using conditionals")
     }
   }
-  let keyToUse = condition;
 
   if (useConditional === true) {
     if (conditions.hasOwnProperty('true')) {
       return conditions['true']();
     }
   }
-
-  Object.keys(conditions)
-    .forEach((key) => {
-      const split = key.split(',');
-      if (split.length > 1) {
-        const includesKey = split.includes(condition);
-        if (includesKey) {
-          keyToUse = key;
-        }
+  let operator;
+  const keys = Object.keys(conditions);
+  for(let i of keys) {
+    if (i.includes(',')) {
+      const split = i.split(',');
+      if (split.includes(condition)) {
+        operator = conditions[i]
+        break;
       }
-    });
+    }
+    if (i.includes(condition)) {
+      operator = conditions[i];
+      break;
+    }
+  }
 
-  const operator = conditions[keyToUse];
   if (!operator && Object.prototype.hasOwnProperty.call(conditions, 'else')) {
     if (conditions.hasOwnProperty('else')) {
       return conditions.else(condition);
@@ -42,5 +44,6 @@ export function when<T>(...args: any): T | string {
   } else if (operator) {
     return operator(condition);
   }
+
   return "No matches"
 }

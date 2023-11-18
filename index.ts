@@ -15,15 +15,17 @@ export function when<T>(...args: any): T | string {
       throw Error("You must supply a condition value if not using conditionals")
     }
   }
-
   if (useConditional === true) {
     if (conditions.hasOwnProperty('true')) {
       return conditions['true']();
     }
   }
-  let operator;
+  let operator = conditions[condition];
+  if (operator) {
+    return operator(condition);
+  }
   const keys = Object.keys(conditions);
-  for(let i of keys) {
+  for (let i of keys) {
     if (i.includes(',')) {
       const split = i.split(',');
       if (split.includes(condition)) {

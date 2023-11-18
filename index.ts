@@ -1,7 +1,7 @@
 export function when<T>(...args: any): T | string {
   let condition: string = '';
-  let conditions: Record<string, (e?: any) => T> = {};
   let useConditional: boolean = false;
+  let conditions: Record<string, (e?: any) => T> = {};
 
   if (args.length === 2 && typeof args[1] !== 'boolean') {
     condition = args[0];
@@ -43,9 +43,6 @@ export function when<T>(...args: any): T | string {
     if (conditions.hasOwnProperty('else')) {
       return conditions.else(condition);
     }
-  } else if (operator) {
-    return operator(condition);
   }
-
   return "No matches"
 }

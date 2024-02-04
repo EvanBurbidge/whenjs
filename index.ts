@@ -25,7 +25,6 @@ export function when<T>(...args: any): T | string {
     return operator(condition);
   }
   const keys = Object.keys(conditions);
-
   for (let i of keys) {
     if (i.includes(',')) {
       const split = i.split(',');

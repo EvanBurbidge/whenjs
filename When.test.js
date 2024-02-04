@@ -28,7 +28,15 @@ describe("When.js", () => {
   it("should be able to check 'array values'", () => {
     const result = when('2', {
       '11': () => "Bingo! It's eleven.",
-      "1,2,3": () => "Array value",
+      [['1', '2', '3'].toString()]: () => "Array value",
+    });
+    expect(result).toEqual("Array value");
+  });
+
+  it("should be able to check 'array values'", () => {
+    const result = when('2', {
+      '11': () => "Bingo! It's eleven.",
+      '1,2,3': () => "Array value",
     });
     expect(result).toEqual("Array value");
   });

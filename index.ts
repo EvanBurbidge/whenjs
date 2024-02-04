@@ -1,5 +1,5 @@
 export function when<T>(...args: any): T | string {
-  let condition: string = '';
+  let condition: string | string[] = '';
   let useConditional: boolean = false;
   let conditions: Record<string, (e?: any) => T> = {};
 
@@ -20,23 +20,28 @@ export function when<T>(...args: any): T | string {
       return conditions['true']();
     }
   }
-  let operator = conditions[condition];
+  let operator = conditions[condition as string];
   if (operator) {
     return operator(condition);
   }
   const keys = Object.keys(conditions);
+
   for (let i of keys) {
     if (i.includes(',')) {
       const split = i.split(',');
-      if (split.includes(condition)) {
+      if (split.includes(condition as string)) {
         operator = conditions[i]
         break;
       }
     }
-    if (i.includes(condition)) {
+    if (i.includes(condition as string)) {
       operator = conditions[i];
       break;
     }
+  }
+
+  if (operator) {
+    return operator()
   }
 
   if (!operator && Object.prototype.hasOwnProperty.call(conditions, 'else')) {
